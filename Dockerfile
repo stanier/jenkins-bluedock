@@ -5,7 +5,7 @@ USER root
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN apk update \
-    && apk add --update docker openrc jq moreutils py-pip gcc \
+    && apk add --update docker openrc jq moreutils py-pip gcc python3-dev\
     && rm -rf /var/lib/apt/lists/* \
     && pip install docker-compose
 
